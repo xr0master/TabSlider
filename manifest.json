@@ -1,0 +1,25 @@
+{
+	"manifest_version": 2,
+	
+	"name": "TabSlider",
+	"description": "This extension slides browser open tabs",
+	"version": "0.3",
+	
+	"author": "Sergey Khomushin",
+	
+	"background": {
+		"scripts":["js/background.js"]
+	},
+	"content_scripts": [
+		{
+			"js": ["js/mousemove.js"],
+			"matches": ["<all_urls>"]
+		}
+	],
+	"permissions": ["tabs"],
+	"browser_action": {
+		"default_title": "TabSlider",
+		"default_icon": "images/icon.png",
+		"default_popup": "popup.html"
+	}
+}

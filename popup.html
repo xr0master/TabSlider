@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>TabSlider</title>
+		<script src="js/popup.js" type="text/javascript"></script>
+		<style>
+			html,body
+			{
+				padding: 0px;
+				margin: 0px;
+				width: 250px;
+			}
+			label[for]
+			{
+				display: inline-block;
+				width: 90px;
+			}
+			input
+			{
+				width: 60px;
+				border: 1px solid #777;
+			}
+			fieldset
+			{
+				border: 1px solid #444;
+			}
+			.buttons
+			{
+				margin: 15px 0px 5px 0px;
+				text-align: center;
+			}
+			.buttons input:hover
+			{
+				background: #ccc;
+			}
+			.buttons input:active
+			{
+				background: #ccc;
+				-webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.5);
+				box-shadow: inset 1px 1px 2px rgba(0,0,0,0.5);
+				
+			}
+		</style>
+	</head>
+	<body>
+		<fieldset>
+			<legend>Settings</legend>
+			<label for="slide_time">Slide time: </label>
+			<input type="text" id="slide_time" min="1" step="1">
+			<span>seconds</span>
+			<label for="refresh_time">Refresh time: </label>
+			<input type="text" id="refresh_time" min="1" step="1">
+			<span>seconds</span>
+		</fieldset>
+		<div class="buttons">
+			<input type="button" id="start" value="Start">
+			<input type="button" id="stop" value="Stop">
+		</div>
+	</body>
+</html>
